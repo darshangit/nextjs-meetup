@@ -26,7 +26,7 @@ export async function getStaticPaths() {
         },
       },
     ],
-    fallback: false,
+    fallback: false, // true will make nextjs auto generate a path for us else 404
   };
 }
 
