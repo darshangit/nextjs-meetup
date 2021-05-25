@@ -33,7 +33,7 @@ export async function getStaticPaths() {
       params: { meetupId: meetup._id.toString() },
     })),
 
-    fallback: false, // true will make nextjs auto generate a path for us else 404
+    fallback: 'blocking', // true/blocking will make nextjs auto generate a path for us else 404
   };
 }
 
