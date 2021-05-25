@@ -21,7 +21,7 @@ const MeetupDetails = (props) => {
 };
 
 export async function getStaticPaths() {
-  const client = await MongoClient.connect(MONGO_CRED);
+  const client = await MongoClient.connect(process.env.MONGO_CRED || MONGO_CRED);
   const db = client.db();
 
   const meetupCollection = db.collection("meetups");
