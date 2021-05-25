@@ -18,7 +18,7 @@ const HomePage = (props) => {
 //runs during build process
 export async function getStaticProps() {
   // fetch data from API
-  const client = await MongoClient.connect(process.env.MONGO_CRED || MONGO_CRED);
+  const client = await MongoClient.connect(process.env.MONGO_CRED);
   const db = client.db();
 
   const meetupCollection = db.collection("meetups");
